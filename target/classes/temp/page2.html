@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Lab_10_Camilla</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<a th:text="${student.getId()}"></a>
+<a th:text="${student.getName()}"></a>
+<br>
+<form th:method="get" th:action="@{/students/{id}/edit (id = ${student.getId()})}">
+    <input type="submit" value="update">
+</form>
+<form th:method="delete" th:action="@{/students/{id} (id = ${student.getId()})}">
+    <input type="submit" value="delete">
+</form>
+</body>
+</html>
